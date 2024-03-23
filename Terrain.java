@@ -22,32 +22,39 @@ public class Terrain extends RacingObject {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập địa hình:");
         System.out.print("Nhập ID: ");
+        this.setId(scanner.nextInt());
+        scanner.nextLine(); // Tiêu thụ ký tự xuống dòng
+        System.out.print("Nhập tên địa hình: ");
+        this.setName(scanner.nextLine());
+        System.out.print("Miêu tả địa hình: ");
+        this.setDescription(scanner.nextLine());
+        System.out.print("Nhập kiểu địa hình: ");
         this.type = scanner.nextLine();
         System.out.print("Nhập độ khó: ");
         this.difficulty = scanner.nextInt();
-        System.out.print("Nhập độ dài: ");
+        System.out.print("Nhập độ dài (km): ");
         this.length = scanner.nextDouble();
         System.out.print("Nhập số chướng ngại vật: ");
         int numObstacles = scanner.nextInt();
-        scanner.nextLine(); //Tiêu thụ ký tự dòng mới
+        scanner.nextLine(); // Tiêu thụ ký tự xuống dòng
         this.obstacles = new ArrayList<>();
         for (int i = 0; i < numObstacles; i++) {
-            System.out.print("Chướng ngại vật " + (i + 1)
-            		+ ": ");
+            System.out.print("Chướng ngại vật " + (i + 1) + ": ");
             String obstacle = scanner.nextLine();
             this.obstacles.add(obstacle);
         }
     }
+
     // Phương pháp xuất
     @Override
     public void Xuat() {
         System.out.println("Địa hình :");
         System.out.println("ID là: " + getId());
         System.out.println("Tên: " + getName());
-        System.out.println("Miêu tả địa hình : " + getDescription());
+        System.out.println("Miêu tả địa hình: " + getDescription());
         System.out.println("Kiểu địa hình: " + type);
         System.out.println("Độ khó: " + difficulty);
-        System.out.println("Độ dài: " + length);
+        System.out.println("Độ dài: " + length + "km");
         System.out.println("Chướng ngại vật: ");
         for (String obstacle : obstacles) {
             System.out.println("- " + obstacle);
