@@ -3,11 +3,6 @@ package du_an_zingspeed;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-package du_an_zingspeed;
-
-import java.util.ArrayList;
-import java.util.Scanner;
-
 public class Player extends RacingObject {
     private int level;
     private RacingCar currentCar;
