@@ -1,5 +1,3 @@
-package du_an_zingspeed;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
