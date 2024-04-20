@@ -1,5 +1,3 @@
-package du_an_zingspeed;
-
 public interface Moveable {
 	void accelerate();
 
