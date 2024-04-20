@@ -1,5 +1,3 @@
-package du_an_zingspeed;
-
 import java.util.Scanner;
 
 public class RacingCar extends RacingObject implements Moveable {
