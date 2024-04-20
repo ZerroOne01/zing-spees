@@ -1,5 +1,3 @@
-package du_an_zingspeed;
-
 abstract class RacingObject {
  private int id;
  private String name;
